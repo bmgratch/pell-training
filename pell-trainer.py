@@ -8,9 +8,9 @@ from os import listdir
 from random import randint, choice
 
 
-fullTime = 50
+fullTime = 60
 shortest = 1
-longest = 8
+longest = 5
 
 def populateSounds():
     return listdir(path='audio')
@@ -25,11 +25,12 @@ def soundTimer(sounds):
 soundList = populateSounds()
 strike = fullTime - randint(shortest, longest)
 while fullTime > 0:
-    print(fullTime, end=' ')
+    #print(fullTime, end=' ')
     if strike == fullTime:
         playSound()
         strike = fullTime - randint(shortest, longest)
-    time.sleep(1)
+    time.sleep(0.7)
     fullTime -= 1
+time.sleep(2)
 playSound()
     
