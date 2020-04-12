@@ -8,7 +8,7 @@ from os import listdir
 from random import randint, choice
 
 
-fullTime = 172
+fullTime = 172 # how many counts the program lasts, each 0.7s
 shortest = 1
 longest = 5
 
