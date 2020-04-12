@@ -8,7 +8,7 @@ from os import listdir
 from random import randint, choice
 
 
-fullTime = 60
+fullTime = 172
 shortest = 1
 longest = 5
 
