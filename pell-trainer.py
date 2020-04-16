@@ -6,6 +6,7 @@
 import time, subprocess
 from os import listdir
 from random import randint, choice
+from pathlib import Path
 
 
 fullTime = 172 # how many counts the program lasts, each 0.7s
@@ -17,7 +18,7 @@ def populateSounds():
 
 def playSound():
     sound = choice(soundList)
-    subprocess.Popen(['start', 'audio\\'+sound], shell=True)
+    subprocess.Popen(['start', Path('audio',sound)], shell=True)
 
 def soundTimer(sounds):
     return randint(shortest, longest), choice(sounds)
